@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       create: (_) => HomeBloc(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Learn Bloc",
+        title: "Learn BlockPost",
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

@@ -9,12 +9,31 @@ class HomePostGetEvent extends HomeEvent {
   List<Object?> get props => [];
 }
 
-class HomeDeleteEvent extends HomeEvent{
-  int id;
+class HomePostDeleteEvent extends HomeEvent {
+  final String id;
 
   @override
-  List<Object?> get props => [];
+  List<Object> get props => [id];
 
-  HomeDeleteEvent({required this.id});
+  const HomePostDeleteEvent(this.id);
+}
+
+class HomeCreatePostEvent extends HomeEvent {
+  final BuildContext context;
+
+  @override
+  List<Object> get props => [context];
+
+  const HomeCreatePostEvent(this.context);
+}
+
+class HomeUpdatePostEvent extends HomeEvent {
+  final Post post;
+  final BuildContext context;
+
+  @override
+  List<Object> get props => [context];
+
+  const HomeUpdatePostEvent(this.context, this.post);
 }
 
